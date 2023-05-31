@@ -40,14 +40,14 @@ function fillDatainCard(cardClone, article){
     newsDesc.innerHTML = article.description;
 
     const date = new Date(article.publishedAt).toLocaleString("en-US", {
-        timeZone: "Asia/Jakarta"
-    })
+        timeZone: "Asia/Jakarta";
+    });
 
     newsSource.innerHTML = `${article.source.name} . ${date}`;
 
     cardClone.firstElementChild.addEventListener('click', () => {
         window.open(article.url, "_blank");
-    })
+    });
 }
 
 let CurSelectedNav = null;
